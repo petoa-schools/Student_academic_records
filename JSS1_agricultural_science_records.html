@@ -1141,7 +1141,13 @@
         window.location.href = 'junior_index.html';
       }
     });
-
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
     // FIXED: Logout button handler
     logoutBtn.addEventListener('click', function() {
       console.log('Logout button clicked on records page'); // Debug log

@@ -1225,6 +1225,14 @@
             window.location.href = 'index.html';
         }
 
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
+
   </script>
 </body>
 </html>

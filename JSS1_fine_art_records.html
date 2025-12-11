@@ -1026,6 +1026,14 @@
       }
     });
 
+      document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
+
     // Calculate total for a single row
     function calculateRowTotal(row) {
       const ca1 = parseFloat(row.querySelector('.ca1').value) || 0;

@@ -990,7 +990,13 @@
       footerContext.textContent = `${context.selectedClass} ${context.selectedSubject} - ${context.selectedTerm} Term ${context.selectedSession}`;
       pageIdentifier.textContent = storageKey;
     }
-
+       document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
     // Calculate stats
     function calculateStats() {
       const rows = table.querySelectorAll('tr');

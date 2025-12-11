@@ -1014,6 +1014,14 @@
       lowestScore.textContent = minScore === 100 ? 0 : minScore;
     }
 
+      document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
+
     // Calculate total when any input changes
     table.addEventListener('input', (e) => {
       if (e.target.classList.contains('ca1') ||

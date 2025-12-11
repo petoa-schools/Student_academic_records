@@ -1195,7 +1195,13 @@
       // Test the logout button
       console.log('Logout button element:', logoutBtn);
     });
-
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
      // ================== ANTI-CHEAT & LOGOUT ==================
         document.addEventListener('keydown', function (event) {
             const key = event.key.toLowerCase();
