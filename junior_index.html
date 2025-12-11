@@ -482,6 +482,14 @@ function checkInput2() {
                 alert("Developer tools are disabled during examination.");
             }
         });
+
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
        
     </script>
 

@@ -301,7 +301,7 @@
         }
     </style>
 </head>
-<body>
+<body oncontextmenu="return false;">
     <nav>
         <div class="nav-container">
             <ul class="nav-links">
@@ -459,21 +459,29 @@ function checkInput2() {
             const key = event.key.toLowerCase();
             if ((event.ctrlKey && (key === 'p' || key === 's')) && currentSection === 'objectives') {
                 event.preventDefault();
-                alert("Right-click and view source are disabled during examination.");
+                alert("Right-click and view source are disabled during sessions here.");
                 return false;
             }
         });
        
         document.addEventListener('contextmenu', (event) => {
             event.preventDefault();
-            alert("Right-click is disabled during examination.");
+            alert("Right-click is disabled during sessions here.");
         });
        
         document.addEventListener('keydown', function (e) {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') ||
                 (e.ctrlKey && e.shiftKey && e.key === 'J') || (e.ctrlKey && e.key === 'u')) {
                 e.preventDefault();
-                alert("Developer tools are disabled during examination.");
+                alert("Developer tools are disabled Here.");
+            }
+        });
+
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
             }
         });
        
