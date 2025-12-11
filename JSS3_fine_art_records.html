@@ -1120,6 +1120,15 @@
       }, 5000);
     }
 
+
+      document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
+
     // Initialize page
     document.addEventListener('DOMContentLoaded', function() {
       console.log('Records page loaded'); // Debug log

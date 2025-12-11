@@ -1071,6 +1071,14 @@
       showMessage(`CSV file downloaded: ${storageKey}_records.csv`, "success");
     });
 
+      document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
+
     // Back button handler
     //backBtn.addEventListener('click', () => {
     backBtn.addEventListener('click', function() {

@@ -1103,6 +1103,14 @@
       }
     });
 
+      document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
+
     // Show message function
     function showMessage(text, type) {
       message.textContent = text;

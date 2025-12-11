@@ -909,7 +909,13 @@
      
       return `${classKey}_${subjectKey}_${termKey}_${sessionKey}`;
     }
-
+       document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
     // Update page context
     function updatePageContext() {
       const context = getContextFromStorage();

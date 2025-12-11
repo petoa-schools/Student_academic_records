@@ -887,7 +887,15 @@
         logoPlaceholder.style.display = 'flex';
       }
     }
+     
 
+       document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
     // Get context from localStorage
     function getContextFromStorage() {
       const selectedClass = localStorage.getItem('selectedClass') || 'JSS3';

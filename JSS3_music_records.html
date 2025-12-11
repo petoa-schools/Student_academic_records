@@ -991,7 +991,13 @@
       });
       calculateStats();
     }
-
+       document.addEventListener('keydown', function (e) {
+            if (e.key === 's' ) 
+                {
+                e.preventDefault();
+                alert("Developer tools are disabled during sessions here.");
+            }
+        });
     // Save records to localStorage
     submitBtn.addEventListener('click', () => {
       const storageKey = generateStorageKey();
